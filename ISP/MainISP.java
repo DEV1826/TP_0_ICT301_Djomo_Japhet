@@ -8,6 +8,6 @@ public class MainISP {
 
         RobotWorkerRefactored robot = new RobotWorkerRefactored();
         robot.work();
-        // robot.eat() n'existe plus, ce qui évite l'erreur
+       
     }
 }
