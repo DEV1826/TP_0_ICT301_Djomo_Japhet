@@ -10,7 +10,6 @@ public class Main {
         Shape circle = new CircleOCP(5);
         System.out.println("Area Circle = " + calculator.calculateArea(circle));
         
-        // On peut facilement ajouter une nouvelle forme sans modifier AreaCalculator2
-        // Par exemple: Triangle, Square, etc.
+    
     }
 }
