@@ -23,7 +23,7 @@ Une classe ne devrait avoir qu'une seule raison de changer. Cela signifie qu'ell
 ### 2. Open/Closed Principle (OCP)
 **Ouvert à l'extension, fermé à la modification**
 
-Les entités logicielles doivent être ouvertes à l'extension mais fermées à la modification. On doit pouvoir ajouter de nouvelles fonctionnalités sans modifier le code existant. L'utilisation de l'abstraction et du polymorphisme permet d'atteindre cet objectif. Par exemple, pour ajouter une nouvelle forme géométrique, on n'a pas besoin de modifier la classe calculatrice, on crée simplement une nouvelle classe implémentant l'interface `Shape`.
+Les entités logicielles doivent être ouvertes à l'extension mais fermées à la modification. L'utilisation de l'abstraction et du polymorphisme permet d'atteindre cet objectif. Par exemple, pour ajouter une nouvelle forme géométrique, on n'a pas besoin de modifier la classe calculatrice, on crée simplement une nouvelle classe implémentant l'interface `Shape`.
 
 **Avantages :**
 - Réduit la rigidité du code
@@ -61,81 +61,6 @@ Les modules de haut niveau ne doivent pas dépendre des modules de bas niveau. L
 - Améliore la réutilisabilité
 - Permet de changer facilement d'implémentation
 
----
-
-## Structure du Projet
-
-```
-TP_0_ICT301_Djomo_Japhet/
-│
-├── README.md
-├── DiagrammesSOLID.pdf
-│
-├── SRP/
-│   ├── Book.java (avant refactoring)
-│   ├── BookSRP.java (après refactoring)
-│   ├── BookPrinter.java
-│   ├── BookSaver.java
-│   └── BookBusinessLogic.java
-│
-├── OCP/
-│   ├── AreaCalculator.java (avant refactoring)
-│   ├── Shape.java (interface - après refactoring)
-│   ├── Rectangle.java
-│   ├── Circle.java
-│   └── AreaCalculator2.java
-│
-├── LSP/
-│   ├── Example1_Avant/
-│   │   ├── Rectangle.java
-│   │   └── Square.java
-│   ├── Example1_Apres/
-│   │   ├── Rectangle.java
-│   │   └── Square.java
-│   ├── Example2_Avant/
-│   │   ├── Rectangle.java
-│   │   ├── Square.java
-│   │   └── Mainlsp.java
-│   └── Example2_Apres/
-│       ├── Shape.java
-│       ├── Rectangle.java
-│       ├── Square.java
-│       └── Mainlsp2.java
-│
-├── ISP/
-│   ├── Worker.java (avant refactoring)
-│   ├── HumanWorker.java (avant)
-│   ├── RobotWorker.java (avant)
-│   ├── Workable.java (après refactoring)
-│   ├── Eatable.java (après)
-│   ├── HumanWorkerRefactored.java (après)
-│   ├── RobotWorkerRefactored.java (après)
-│   └── MainISP.java
-│
-└── DIP/
-    ├── Example_Avant/
-    │   ├── MySQLDatabase.java
-    │   ├── OrderProcessor.java
-    │   └── Main.java
-    └── Example_Apres/
-        ├── Database.java (interface)
-        ├── MySQLDatabase.java
-        ├── MongoDBDatabase.java
-        ├── OrderProcessor.java
-        └── Main.java
-```
-
----
-
-## Synthèse
-
-Les principes SOLID travaillent ensemble pour créer des architectures logicielles de qualité :
-
-- **SRP** assure la cohésion en séparant les responsabilités
-- **OCP** permet l'extensibilité sans modification
-- **LSP** garantit la substituabilité dans les hiérarchies
-- **ISP** évite les dépendances inutiles aux interfaces
-- **DIP** inverse les dépendances vers les abstractions
-
 
 Ces principes permettent de lutter contre la **rigidité**, la **fragilité** et l'**immobilité** du code, tout en favorisant une **forte cohésion** et un **faible couplage** entre les modules.
+
